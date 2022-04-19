@@ -70,10 +70,15 @@ QQ.EXE -> loaded in memory
    
 5 java的6种线程状态  
 NEW – a newly created thread that has not yet started the execution
+
 RUNNABLE – either running or ready for execution but it's waiting for resource allocation
+
 BLOCKED – waiting to acquire a monitor lock to enter or re-enter a synchronized block/method
+
 WAITING – waiting for some other thread to perform a particular action without any time limit
+
 TIMED_WAITING – waiting for some other thread to perform a specific action for a specified period
+
 TERMINATED – has completed its execution
 
 ![Life_cycle_of_a_Thread_in_Java](https://user-images.githubusercontent.com/24481784/163965686-74d57c46-c591-49c0-ba51-dc57d321ac77.jpg)
