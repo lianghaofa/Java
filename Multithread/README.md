@@ -84,3 +84,50 @@ TERMINATED – has completed its execution
 ![Life_cycle_of_a_Thread_in_Java](https://user-images.githubusercontent.com/24481784/163965686-74d57c46-c591-49c0-ba51-dc57d321ac77.jpg)
 
   
+6 how to stop a thread.
+
+        Thread t = new Thread(()->{
+            while (true){
+                System.out.println("go on");
+            }
+        });
+
+        t.start();
+        // not recommend.   it will release everything including lock,data inconsistent...it will influence others.
+        t.stop();
+        
+        // not recommend.   it will not release everything ...it will cause dead lock ,data inconsistent  ?
+        t.suspend();
+        t.resume();
+
+
+    //  set a flag
+    //  volatile
+    private static volatile boolean running = true;
+
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
+
+        Thread t = new Thread(()->{
+            while (running){
+
+                System.out.println("go on");
+            }
+        });
+        t.start();
+        // but you don't when it will stop.
+        running = false;
+    }
+    //  interrupt
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
+
+        Thread t = new Thread(()->{
+            while (!Thread.interrupted()){
+
+                System.out.println("go on");
+            }
+        });
+        t.start();
+        // but you don't when it will stop.
+        t.interrupt();
+    }
+
