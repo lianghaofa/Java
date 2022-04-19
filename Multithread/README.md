@@ -10,6 +10,7 @@ QQ.EXE -> loaded in memory
   资源分配的基本单位。
 3.2 程序开启进程后，启动一个主线程执行任务。
   执行的基本单位-线程
+  
   ![7a630739f720944f30c7c30f06264ef](https://user-images.githubusercontent.com/24481784/163958247-839490b4-a44d-4add-895a-7c3750a41406.png)
   
 4.create threads in java  
