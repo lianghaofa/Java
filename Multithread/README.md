@@ -67,5 +67,5 @@ QQ.EXE -> loaded in memory
     }
     
     
-  
+   本质都是 new Thread()
   
