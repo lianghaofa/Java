@@ -19,3 +19,21 @@
 
         running = false;
     }
+    
+    // 修改对象时，只对引用对象的可见性，不对对象的内置值起效。
+    
+    A a1 = new A();
+    
+    volatile A a = new A();
+    
+    // it work.
+    a = a1;
+    
+    // it does't work.
+    a.val = 1;
+    
+    
+    
+    
+    
+    
